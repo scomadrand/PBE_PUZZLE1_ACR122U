@@ -24,8 +24,8 @@ class RfidACR122U:
 			COMMAND = cmdMap.get("getuid", "getuid")
 			#transmitim el COMMAND a la card, la card ens retorna data
 			data, sw1, sw2 = connection.transmit(COMMAND)
-			#retornem data en forma de string Hexadecimal
-			return toHexString(data)
+			#retornem data en forma de string Hexadecimal i eliminem els espais
+			return toHexString(data).replace(" ","")
 		  
 if __name__ == "__main__": 
 	rf = RfidACR122U() 
