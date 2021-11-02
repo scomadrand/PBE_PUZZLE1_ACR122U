@@ -1,6 +1,6 @@
 
 import gi
-from main import RfidACR122U
+from RfidACR122U import RfidACR122U
 import threading
 import time
 
